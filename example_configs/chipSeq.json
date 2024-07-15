@@ -1,0 +1,80 @@
+{
+  "InputConfigs": {
+    "peaks": "/nfs/data/COM2POSE/ATAC-seq/chip-seq/",
+    "rnaSeq": "/nfs/data/COM2POSE/ATAC-seq/rna/",
+    "geneIDs": "/nfs/data/COM2POSE/ATAC-seq/rna/Gene_id.txt",
+    "geneAnnotationFile": "/nfs/home/students/n.trummer/Software/hint/hg38/gencode.v21.annotation.gtf",
+    "sameStages": {
+      "MCF-7": "MCF7",
+      "K562": "K562"
+    },
+    "seqType": "chip-seq",
+    "genome": "hg38",
+    "biomartSpecies": "hsapiens_gene_ensembl",
+    "topTargetGenes": 30
+  },
+  "MixOptions": {
+    "blackListPath": "/nfs/data/COM2POSE/TFPRIO_data/05_black_listed_regions/hg38-blacklist.v2.bed",
+    "differentialPeakSignals": false,
+    "maxSpaceBetweenPeaks": 500,
+    "minOccurrence": 1,
+    "mixMutuallyExclusive": false,
+    "perform": true,
+    "tfBindingSiteSearch": "EXCL_BETWEEN"
+  },
+  "DeSeq2": {
+    "tpmFilter": null,
+    "batches": null,
+    "countFilter": 50
+  },
+  "TGene": {
+    "executable": null,
+    "noClosestLocus": false,
+    "noClosestTss": false,
+    "maxLinkDistance": 500000,
+    "pValue": 0.05
+  },
+  "TEPIC": {
+    "randomize": false,
+    "PWMs": "/nfs/data/COM2POSE/TEPIC/PWMs/3.0/combined_Jaspar_Hocomoco_Kellis_human_PSEM.PSEM",
+    "transcriptBased": false,
+    "columnBedfile": null,
+    "windowSize": 50000,
+    "loopListFile": null,
+    "loopWindows": 5000,
+    "exponentialDecay": true,
+    "doNotNormalizePeakLength": false,
+    "maxMinutesPerChromosome": 3,
+    "doZip": false,
+    "originalDecay": false,
+    "psemsLengthFile": null,
+    "pValue": 0.05,
+    "chromosomePrefix": false,
+    "onlyPeakFeatures": false,
+    "entireGeneBody": false,
+    "twoBitFile": null,
+    "onlyDNasePeaks": "/nfs/home/students/n.trummer/Software/hint/hg38/gencode.v21.annotation.gtf",
+    "referenceGenome": "/nfs/home/students/n.trummer/Software/hint/hg38/genome_hg38.fa",
+    "bedChromatinSignal": null,
+    "affinityCutoff": 0.05
+  },
+  "DYNAMITE": {
+    "outVar": "Expression",
+    "iFolds": 6,
+    "oFolds": 3,
+    "performance": true,
+    "alpha": 0.1,
+    "randomize": false,
+    "minRegressionCoefficient": 0.1
+  },
+  "ChipAtlas": {
+    "enabled": true,
+    "tissueTypes": [
+      "lymphoblast",
+      "breast"
+    ]
+  },
+  "IGV": {
+    "topLog2FoldChange": 20
+  }
+}
